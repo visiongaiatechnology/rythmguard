@@ -21,21 +21,22 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: System dependencies for Avalonia (X11)
+      - name: System dependencies for Avalonia (X11 + DBus)
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb libx11-6 libice6 libsm6 libfontconfig1 libgl1 libglib2.0-0
+          sudo apt-get install -y xvfb dbus-x11 libx11-6 libx11-xcb1 libxcb1 libxrender1 libxext6 libice6 libsm6 libfontconfig1 libgl1 libglx-mesa0 libglib2.0-0
 
-      - name: Restore & build
+      - name: Restore & build (Linux projects only)
         run: |
-          dotnet restore VGT.RhythmGuard.slnx
+          dotnet restore src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj
+          dotnet restore tools/VGT.RhythmGuard.FactRunner/VGT.RhythmGuard.FactRunner.csproj
           dotnet build src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj -c Release --no-restore
 
       - name: Core facts
         run: dotnet run --project tools/VGT.RhythmGuard.FactRunner/VGT.RhythmGuard.FactRunner.csproj -c Release
 
-      - name: UI selftest (Xvfb)
-        run: xvfb-run -a dotnet run --project src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj -c Release --no-build -- --selftest
+      - name: UI selftest (Xvfb + DBus)
+        run: dbus-run-session -- xvfb-run -a -s "-screen 0 1280x800x24" dotnet run --project src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj -c Release --no-build -- --selftest
 
       - name: Publish Linux x64 package
         run: bash scripts/publish-linux.sh
