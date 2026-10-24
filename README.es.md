@@ -28,7 +28,7 @@ desgastan el sueño. Rhythm Guard convierte Windows en un marco fijo:
 - **Pausas obligatorias** bloquean la pantalla durante el día.
 - **Modo noche** recuerda cada 20 minutos que no sigas trabajando después de las 23:00.
 - **Modo cama** concede un tiempo configurable (2 h por defecto) y luego fuerza suspensión o apagado.
-- **Todo local:** sin cuenta, sin nube, sin telemetría.
+- **100 % local:** sin cuenta, sin nube, sin telemetría.
 
 ## Funciones
 
