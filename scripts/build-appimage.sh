@@ -19,7 +19,7 @@ cp "$ROOT/src/VGT.RhythmGuard.App.Linux/Assets/logo-mark.png" "$APPDIR/vgt-rhyth
 cp "$ROOT/linux/AppRun" "$APPDIR/AppRun"
 chmod +x "$APPDIR/AppRun" "$APPDIR/usr/bin/rythmguard"
 
-TOOL="$OUT/appimagetool-x86_64.AppImage"
+TOOL="$ROOT/.cache/appimagetool-x86_64.AppImage"
 if [ ! -x "$TOOL" ]; then
   curl -sSL "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage" -o "$TOOL"
   chmod +x "$TOOL"

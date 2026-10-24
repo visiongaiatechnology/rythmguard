@@ -36,3 +36,7 @@ Thumbs.db
 *.pfx
 logs/
 
+
+# Build-Tools-Cache
+.cache/
+

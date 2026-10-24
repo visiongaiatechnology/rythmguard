@@ -169,9 +169,9 @@ public sealed class LinuxApp : Application
             timer.Stop();
             try
             {
+                Localizer.TranslateTree(_dashboard!);
                 if (_dashboard?.Content is Control dashboardContent)
                 {
-                    _dashboard.Content = null;
                     var wrapped = new Border
                     {
                         Width = 1280,
@@ -179,6 +179,7 @@ public sealed class LinuxApp : Application
                         Background = UiKit.AuroraGradient(),
                         Child = dashboardContent,
                     };
+                    _dashboard.Content = wrapped;
                     Capture(wrapped, Path.Combine(directory, "linux-dashboard.png"), 1280, 820);
                 }
                 Capture(breakOverlay.Content as Control, Path.Combine(directory, "linux-break-overlay.png"), 1600, 900);
