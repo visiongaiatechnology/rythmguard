@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>A mental-health rhythm system that anchors breaks, evenings and sleep directly into your Windows session.</strong><br />
+  <strong>A mental-health rhythm system that anchors breaks, evenings and sleep directly into your Windows or Linux session.</strong><br />
   No coaching you can click away — a reliable frame for a healthier rhythm.
 </p>
 
@@ -13,7 +13,7 @@
   <a href="https://github.com/visiongaiatechnology/rythmguard/actions/workflows/build.yml">
     <img src="https://github.com/visiongaiatechnology/rythmguard/actions/workflows/build.yml/badge.svg?branch=main" alt="build" />
   </a>
-  <img src="https://img.shields.io/badge/version-1.2.0-7C5CFF" alt="version 1.2.0" />
+  <img src="https://img.shields.io/badge/version-1.3.1-7C5CFF" alt="version 1.3.1" />
   <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20%7C%20Linux%20x64-4CC9F0" alt="Windows 10/11 and Linux x64" />
   <img src="https://img.shields.io/badge/.NET-10-512BD4" alt=".NET 10" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0-3DA639" alt="AGPL-3.0" />
@@ -33,7 +33,7 @@
 
 <p align="center">
   <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1"><img src="https://img.shields.io/badge/Download_Windows-v1.2.0-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows v1.2.0" /></a>
-  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1"><img src="https://img.shields.io/badge/Download_Linux-v1.3.0-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux v1.3.1" /></a>
+  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1"><img src="https://img.shields.io/badge/Download_Linux-v1.3.1-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux v1.3.1" /></a>
 </p>
 
 ## ⬇️ Download
