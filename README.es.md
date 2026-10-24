@@ -20,6 +20,14 @@
 
 ![Dashboard](docs/screenshots/06-dashboard-overview.png)
 
+## ⬇️ Descargar
+
+| Plataforma | Versión | Descarga |
+|---|---|---|
+| 🪟 **Windows 10/11 x64** | **1.2.0 Beta** | [**Instalador de Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.2.0-beta.1/VGT-RhythmGuard-Setup-1.2.0-Beta.exe) · [Notas de la versión](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1) |
+| 🐧 **Linux x64** | **1.3.0 Beta** | [**AppImage (recomendado)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x86_64.AppImage) · [Archivo tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x64.tar.gz) · [Notas de la versión](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.0-linux-beta.1) |
+
+> Windows: instalador por usuario, sin permisos de administrador. Linux: AppImage es la forma más sencilla (chmod +x y ejecutar). Todas las versiones: [https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases).
 ## Por qué Rhythm Guard
 
 Sesiones largas, un PC encendido durante días y pantallas que siguen iluminadas por la noche
