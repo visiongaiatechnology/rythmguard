@@ -477,7 +477,7 @@ internal partial class SettingsWindow : Window
         RhythmEventKind.PowerActionExecuted => ("⏻", Color.FromRgb(255, 122, 162), "Energie-Aktion ausgeführt"),
         RhythmEventKind.EmergencyExitUsed => ("!", Color.FromRgb(255, 122, 162), "Notausstieg genutzt"),
         RhythmEventKind.SettingsChanged => ("⚙", Color.FromRgb(201, 167, 255), "Einstellungen gespeichert"),
-        RhythmEventKind.AppStarted => ("◦", Color.FromRgb(185, 179, 220), "RhythmGuard gestartet"),
+        RhythmEventKind.AppStarted => ("◦", Color.FromRgb(185, 179, 220), "RythmGuard gestartet"),
         _ => ("·", Color.FromRgb(132, 125, 171), "Ereignis"),
     };
 

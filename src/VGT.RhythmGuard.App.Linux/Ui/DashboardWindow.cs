@@ -399,7 +399,7 @@ internal sealed class DashboardWindow : Window
         RhythmEventKind.PowerActionExecuted => Localizer.T("Energie-Aktion ausgeführt"),
         RhythmEventKind.EmergencyExitUsed => Localizer.T("Notausstieg genutzt"),
         RhythmEventKind.SettingsChanged => Localizer.T("Einstellungen gespeichert"),
-        RhythmEventKind.AppStarted => Localizer.T("RhythmGuard gestartet"),
+        RhythmEventKind.AppStarted => Localizer.T("RythmGuard gestartet"),
         _ => e.Kind.ToString(),
     };
 

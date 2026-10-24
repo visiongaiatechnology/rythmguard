@@ -26,9 +26,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           prerelease: true
-          name: "VGT Rhythm Guard ${{ github.ref_name }}"
+          name: "VGT RythmGuard ${{ github.ref_name }}"
           body: |
-            Linux beta release of VGT Rhythm Guard (Avalonia UI, 1:1 feature parity with Windows).
+            Linux beta release of VGT RythmGuard — Protect Your Rhythm. Protect Yourself. (Avalonia UI, 1:1 feature parity with Windows).
 
             **Features:** forced breaks, evening wind-down mode, bed mode with sleep/hibernate/shutdown,
             Aurora Glass dashboard, 7 languages, XDG autostart, systemd power actions, single instance.
