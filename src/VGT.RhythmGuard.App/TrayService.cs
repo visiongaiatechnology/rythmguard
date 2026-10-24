@@ -50,7 +50,7 @@ internal sealed class TrayService : IDisposable
         _notifyIcon = new NotifyIcon
         {
             Icon = _icon,
-            Text = "VGT RhythmGuard",
+            Text = "VGT RythmGuard",
             Visible = true,
             ContextMenuStrip = menu,
         };
@@ -97,7 +97,7 @@ internal sealed class TrayService : IDisposable
             RhythmMode.Evening => $"Abendmodus · Tag beginnt in {remaining}",
             RhythmMode.Bed => $"Bett-Modus · {remaining} bis {DescribePowerAction(snapshot.BedSession?.Action ?? PowerAction.Sleep)}",
             RhythmMode.BedExpired => "Bett-Modus beendet · Energie-Aktion läuft",
-            _ => "VGT RhythmGuard",
+            _ => "VGT RythmGuard",
         };
     }
 

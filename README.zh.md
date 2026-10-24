@@ -1,7 +1,9 @@
-# VGT Rhythm Guard
+# VGT RythmGuard
+
+> **守护你的节律。守护你自己。**
 
 <p align="center">
-  <img src="docs/branding/logo-wordmark.png" alt="VGT Rhythm Guard" width="460" />
+  <img src="docs/branding/logo-wordmark.png" alt="VGT RythmGuard" width="460" />
 </p>
 
 <p align="center">
@@ -19,13 +21,13 @@
 
 | 平台 | 版本 | 下载 |
 |---|---|---|
-| 🪟 **Windows 10/11 x64** | **1.2.0 Beta** | [**Windows 安装程序**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.2.0-beta.1/VGT-RhythmGuard-Setup-1.2.0-Beta.exe) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1) |
-| 🐧 **Linux x64** | **1.3.1 Beta** | [**AppImage（推荐）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x86_64.AppImage) · [tar 压缩包](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x64.tar.gz) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1) |
+| 🪟 **Windows 10/11 x64** | **1.4.0 Beta** | [**Windows 安装程序**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-beta.1/VGT-RythmGuard-Setup-1.2.0-Beta.exe) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1) |
+| 🐧 **Linux x64** | **1.4.0 Beta** | [**AppImage（推荐）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x86_64.AppImage) · [tar 压缩包](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x64.tar.gz) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1) |
 
 > Windows：按用户安装，无需管理员权限。Linux：AppImage 最简单（chmod +x 后运行）。所有版本：[https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases)。
-## 为什么选择 Rhythm Guard
+## 为什么选择 RythmGuard
 
-长时间工作、电脑连续运行数日、夜里屏幕常亮，会逐渐破坏睡眠。Rhythm Guard 为 Windows 建立固定框架：
+长时间工作、电脑连续运行数日、夜里屏幕常亮，会逐渐破坏睡眠。RythmGuard 为 Windows 建立固定框架：
 
 - **强制休息**：白天按计划锁定屏幕。
 - **晚间模式**：23:00 之后每 20 分钟提醒不要继续工作。
@@ -63,7 +65,7 @@ powershell -ExecutionPolicy Bypass -File scripts\publish.ps1
 powershell -ExecutionPolicy Bypass -File scripts\install-autostart.ps1 -StartNow
 ```
 
-安装程序按用户安装到 `%LOCALAPPDATA%\Programs\VGT Rhythm Guard`，无需管理员。本地构建的 EXE 未签名，请一次性确认 SmartScreen（*更多信息 → 仍要运行*）。
+安装程序按用户安装到 `%LOCALAPPDATA%\Programs\VGT RythmGuard`，无需管理员。本地构建的 EXE 未签名，请一次性确认 SmartScreen（*更多信息 → 仍要运行*）。
 
 ## 从源码构建
 

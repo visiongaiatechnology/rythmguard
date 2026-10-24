@@ -3,6 +3,19 @@
 All notable changes to VGT Rhythm Guard are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](https://semver.org/).
 
+## [1.4.0] — 2026-10-24
+
+### Changed
+- **Brand relaunch: VGT RythmGuard** — aligned with the logo spelling and new brand promise
+  “Protect Your Rhythm. Protect Yourself.”
+- Windows, Linux, installer, tray, splash and documentation now consistently use the RythmGuard brand.
+- Windows release 1.4.0 bundle: 7-language Aurora Glass UI, profile-name personalization, Inno Setup
+  beta installer with branded terms/copyright.
+- Linux release 1.4.0: fullscreen X11 overlay, complete English surface localization, AppImage + tarball.
+
+### Technical
+- Technical identifiers (namespaces, assembly/repository names, tags) intentionally unchanged for
+  upgrade compatibility; display brand is RythmGuard.
 ## [1.3.1] — 2026-10-24
 
 ### Fixed

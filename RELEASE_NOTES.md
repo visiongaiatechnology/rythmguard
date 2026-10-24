@@ -1,26 +1,22 @@
-﻿# Release Notes — VGT Rhythm Guard 1.2.0 (Beta)
+﻿# VGT RythmGuard 1.4.0 (Beta) — Windows
 
-**This is a beta release for evaluation and personal use.**
+**Protect Your Rhythm. Protect Yourself.**
 
-## Highlights
-- Forced breaks, evening wind-down mode and bed mode with sleep/hibernate/shutdown
-- Aurora Glass dashboard, tray app, per-user autostart (optional)
-- 7-language UI: English, Deutsch, Español, Italiano, Русский, 中文, 日本語
-- Branded English Inno Setup installer (per-user, no administrator rights)
-- Terms of Use / Beta Notice / Copyright included in the installer
+This is the brand-aligned Windows release of VGT RythmGuard: forced breaks, evening wind-down
+mode and bed mode with sleep/hibernate/shutdown — plus the Aurora Glass dashboard, 7 languages,
+profile-name personalization and a per-user beta installer.
 
 ## Installer
-- File: `VGT-RhythmGuard-Setup-1.2.0-Beta.exe`
-- SHA256: `5B4BB6F015ED35215CD39DCE157C695DF96F2F83594BE82176C5AF0623C05243`
+- File: `VGT-RythmGuard-Setup-1.4.0-Beta.exe`
+- Per-user install (`%LOCALAPPDATA%\Programs\VGT RythmGuard`) — no administrator rights
+- English branded setup with Terms of Use / Beta Notice / Copyright, optional desktop shortcut
+  and optional autostart
 - Unsigned build: Windows SmartScreen may ask once (More info → Run anyway)
 
-## Quality evidence
-- Build: `dotnet build VGT.RhythmGuard.slnx -c Release` — PASS
-- Core facts: FactRunner — 32/32 PASS
-- xUnit: executed in CI (see Actions); not executed locally due to restricted testhost
-- CI: https://github.com/visiongaiatechnology/rythmguard/actions
+## Quality
+- Windows build: PASS (0 errors)
+- Core facts: 32/32 PASS
+- Linux sibling release 1.4.0: CI green, AppImage selftest PASS
 
-## Notes
-- No network access, no telemetry, local data only.
-- Save your work before testing forced power actions.
-- AGPL-3.0 license; source code in this repository.
+**Beta software** — save your work before testing forced breaks or power actions.
+AGPL-3.0. Source: https://github.com/visiongaiatechnology/rythmguard

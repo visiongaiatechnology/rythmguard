@@ -114,7 +114,7 @@ internal static class Localizer
         ["Du hast die Pause selbst gestartet. Bleib dabei."] = new() { ["en"] = "You started this break yourself. Stay with it." },
         ["Augen schließen und zehnmal tief durchatmen."] = new() { ["en"] = "Close your eyes and take ten deep breaths." },
         ["Aufstehen. Der PC kann warten."] = new() { ["en"] = "Stand up. The PC can wait." },
-        ["RhythmGuard gestartet"] = new() { ["en"] = "RhythmGuard started" },
+        ["RythmGuard gestartet"] = new() { ["en"] = "RythmGuard started" },
         ["Pause gestartet"] = new() { ["en"] = "Break started" },
         ["Pause abgeschlossen"] = new() { ["en"] = "Break completed" },
         ["Pause abgebrochen"] = new() { ["en"] = "Break cancelled" },

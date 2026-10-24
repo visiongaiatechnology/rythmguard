@@ -93,7 +93,7 @@ internal partial class FullscreenOverlayWindow : Window
             : Localizer.T("Der Bildschirm bleibt aus. Steh auf, atme, trink Wasser.");
         SuggestionPanel.Visibility = Visibility.Visible;
         HintText.Visibility = Visibility.Visible;
-        HintText.Text = "VGT RhythmGuard · Dein Rhythmus hat Vorrang vor dem Bildschirm.";
+        HintText.Text = "VGT RythmGuard · Protect Your Rhythm. Protect Yourself.";
         EmergencyPanel.Visibility = _emergencyEnabled ? Visibility.Visible : Visibility.Collapsed;
 
         ProgressFill.Width = Math.Max(0, (ProgressTrack.ActualWidth > 0 ? ProgressTrack.ActualWidth : 520) * Math.Clamp(display.Progress, 0d, 1d));
@@ -127,7 +127,7 @@ internal partial class FullscreenOverlayWindow : Window
         SubtitleText.Text = Localizer.T("Bitte speichere deine Arbeit. Danach fährt der Rechner herunter.");
         SuggestionPanel.Visibility = Visibility.Collapsed;
         EmergencyPanel.Visibility = Visibility.Collapsed;
-        HintText.Text = "VGT RhythmGuard · Bett-Modus ist abgelaufen.";
+        HintText.Text = "VGT RythmGuard · Bett-Modus ist abgelaufen.";
         ProgressFill.Width = Math.Max(0, (ProgressTrack.ActualWidth > 0 ? ProgressTrack.ActualWidth : 520) * (1d - Math.Clamp(display.Seconds / 60d, 0d, 1d)));
     }
 

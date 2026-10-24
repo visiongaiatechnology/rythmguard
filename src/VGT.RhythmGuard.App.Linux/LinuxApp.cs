@@ -239,7 +239,7 @@ public sealed class LinuxApp : Application
             _tray = new TrayIcon
             {
                 Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://VGT.RhythmGuard/Assets/app.ico"))),
-                ToolTipText = "VGT Rhythm Guard",
+                ToolTipText = "VGT RythmGuard",
                 IsVisible = true,
             };
 

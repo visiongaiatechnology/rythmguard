@@ -1,7 +1,9 @@
-# VGT Rhythm Guard
+# VGT RythmGuard
+
+> **Proteggi il tuo ritmo. Proteggi te stesso.**
 
 <p align="center">
-  <img src="docs/branding/logo-wordmark.png" alt="VGT Rhythm Guard" width="460" />
+  <img src="docs/branding/logo-wordmark.png" alt="VGT RythmGuard" width="460" />
 </p>
 
 <p align="center">
@@ -19,14 +21,14 @@
 
 | Piattaforma | Versione | Download |
 |---|---|---|
-| 🪟 **Windows 10/11 x64** | **1.2.0 Beta** | [**Installatore Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.2.0-beta.1/VGT-RhythmGuard-Setup-1.2.0-Beta.exe) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1) |
-| 🐧 **Linux x64** | **1.3.1 Beta** | [**AppImage (consigliato)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x86_64.AppImage) · [Archivio tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x64.tar.gz) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1) |
+| 🪟 **Windows 10/11 x64** | **1.4.0 Beta** | [**Installatore Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-beta.1/VGT-RythmGuard-Setup-1.2.0-Beta.exe) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1) |
+| 🐧 **Linux x64** | **1.4.0 Beta** | [**AppImage (consigliato)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x86_64.AppImage) · [Archivio tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x64.tar.gz) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1) |
 
 > Windows: installazione per utente, senza diritti di amministratore. Linux: AppImage è il modo più semplice (chmod +x ed eseguire). Tutte le release: [https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases).
-## Perché Rhythm Guard
+## Perché RythmGuard
 
 Sessioni di lavoro lunghe, PC accesi per giorni e schermi illuminati di notte rovinano il sonno.
-Rhythm Guard trasforma Windows in una cornice fissa:
+RythmGuard trasforma Windows in una cornice fissa:
 
 - **Pause obbligatorie** bloccano lo schermo durante il giorno.
 - **Modalità serale** ricorda ogni 20 minuti di non continuare a lavorare dopo le 23:00.
@@ -64,7 +66,7 @@ powershell -ExecutionPolicy Bypass -File scripts\publish.ps1
 powershell -ExecutionPolicy Bypass -File scripts\install-autostart.ps1 -StartNow
 ```
 
-L'installer è per utente (`%LOCALAPPDATA%\Programs\VGT Rhythm Guard`), senza admin.
+L'installer è per utente (`%LOCALAPPDATA%\Programs\VGT RythmGuard`), senza admin.
 Gli eseguibili locali non sono firmati: conferma SmartScreen una volta
 (*Ulteriori informazioni → Esegui comunque*).
 

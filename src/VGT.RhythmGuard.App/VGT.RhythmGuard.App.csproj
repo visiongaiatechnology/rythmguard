@@ -22,10 +22,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>assets\app.ico</ApplicationIcon>
     <Platforms>AnyCPU;x64</Platforms>
-    <Version>1.2.0</Version>
+    <Version>1.4.0</Version>
     <Company>VisionGaiaTechnology</Company>
-    <Product>VGT RhythmGuard</Product>
-    <Description>Mental-Health-Rhythmus-System für Windows: erzwungene Pausen, Abendmodus, Bett-Modus.</Description>
+    <AssemblyTitle>VGT RythmGuard</AssemblyTitle>
+    <Product>VGT RythmGuard</Product>
+    <Description>VGT RythmGuard — Protect Your Rhythm. Protect Yourself. Mental-health rhythm system for Windows.</Description>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <!-- UI-Layer: literale deutsche Texte sind Produktinhalt; WinForms-Analyzer greift bei unserem
          Manifest-DPI (WPF PerMonitorV2). Verwerfbarkeit übernimmt der WPF-Lebenszyklus. -->

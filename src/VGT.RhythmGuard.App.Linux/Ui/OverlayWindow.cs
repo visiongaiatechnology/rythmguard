@@ -123,7 +123,7 @@ internal sealed class OverlayWindow : Window
         });
         stack.Children.Add(UiKit.Caption(Localizer.T("Notausstieg: ESC 5 Sekunden halten")));
         stack.Children.Add(_emergencyBar);
-        stack.Children.Add(UiKit.Caption("VGT Rhythm Guard · Powered by VisionGaiaTechnology"));
+        stack.Children.Add(UiKit.Caption("VGT RythmGuard · Powered by VisionGaiaTechnology"));
 
         Content = new Border
         {

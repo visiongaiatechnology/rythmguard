@@ -47,7 +47,7 @@ internal sealed class DashboardWindow : Window
     public DashboardWindow(RhythmCoordinator coordinator)
     {
         _coordinator = coordinator;
-        Title = "VGT Rhythm Guard — Dashboard";
+        Title = "VGT RythmGuard — Dashboard";
         Width = 1280;
         Height = 820;
         MinWidth = 1000;
@@ -103,7 +103,7 @@ internal sealed class DashboardWindow : Window
             new StackPanel
             {
                 VerticalAlignment = VerticalAlignment.Center,
-                Children = { UiKit.TextBlock("RhythmGuard", 17, FontWeight.SemiBold), UiKit.Caption("MENTAL RHYTHM") },
+                Children = { UiKit.TextBlock("RythmGuard", 17, FontWeight.SemiBold), UiKit.Caption("PROTECT YOUR RHYTHM") },
             });
 
         var userCard = UiKit.Horizontal(

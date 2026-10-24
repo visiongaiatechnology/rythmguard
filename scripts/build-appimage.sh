@@ -3,7 +3,7 @@
 set -e
 export PATH="$HOME/.dotnet:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VERSION="1.3.1"
+VERSION="1.4.0"
 OUT="$ROOT/dist-linux"
 APPDIR="$OUT/VGT-RhythmGuard.AppDir"
 
@@ -27,5 +27,5 @@ if [ ! -x "$TOOL" ]; then
 fi
 
 export ARCH=x86_64
-"$TOOL" --appimage-extract-and-run "$APPDIR" "$OUT/VGT-RhythmGuard-$VERSION-linux-x86_64.AppImage"
-echo "AppImage created: $OUT/VGT-RhythmGuard-$VERSION-linux-x86_64.AppImage"
+"$TOOL" --appimage-extract-and-run "$APPDIR" "$OUT/VGT-RythmGuard-$VERSION-linux-x86_64.AppImage"
+echo "AppImage created: $OUT/VGT-RythmGuard-$VERSION-linux-x86_64.AppImage"

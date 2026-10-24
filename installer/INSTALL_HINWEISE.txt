@@ -1,8 +1,8 @@
-VGT RHYTHM GUARD 1.2.0 (BETA) — INSTALLATION NOTES
+VGT RYTHMGUARD 1.2.0 (BETA) — INSTALLATION NOTES
 
 Before you install:
 
-1. If Rhythm Guard is already running, close it first via the tray icon
+1. If RythmGuard is already running, close it first via the tray icon
    (right-click -> Quit) or the Task Manager.
 
 2. Windows SmartScreen may warn about the unsigned setup. Click
@@ -14,7 +14,7 @@ Before you install:
 
 What the setup does:
 
-- Installs per-user to %LOCALAPPDATA%\Programs\VGT Rhythm Guard.
+- Installs per-user to %LOCALAPPDATA%\Programs\VGT RYTHMGUARD.
 - Requires NO administrator rights and changes no system-wide files.
 - Optionally creates a desktop shortcut and enables autostart at sign-in.
 - Creates a Start-menu entry and a standard Windows uninstall entry.

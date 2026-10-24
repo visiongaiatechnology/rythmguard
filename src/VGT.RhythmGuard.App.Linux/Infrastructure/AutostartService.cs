@@ -47,7 +47,7 @@ internal sealed class AutostartService
                 "[Desktop Entry]",
                 "Type=Application",
                 "Version=1.0",
-                "Name=VGT Rhythm Guard",
+                "Name=VGT RythmGuard",
                 "Comment=Mental health rhythm system: forced breaks, evening wind-down, bed mode",
                 $"Exec={ExecLine}",
                 "Terminal=false",

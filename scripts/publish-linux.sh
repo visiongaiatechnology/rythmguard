@@ -3,7 +3,7 @@
 set -e
 export PATH="$HOME/.dotnet:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VERSION="1.3.1"
+VERSION="1.4.0"
 OUT="$ROOT/dist-linux"
 ARCH="linux-x64"
 
@@ -20,5 +20,5 @@ cp "$ROOT/linux/vgt-rhythmg-ard.desktop" "$OUT/package/"
 cp "$ROOT/src/VGT.RhythmGuard.App.Linux/Assets/logo-mark.png" "$OUT/package/vgt-rhythmg-ard.png"
 cp "$ROOT/README.md" "$OUT/package/README.md"
 
-tar -C "$OUT/package" -czf "$OUT/VGT-RhythmGuard-$VERSION-$ARCH.tar.gz" .
-echo "Release package created: $OUT/VGT-RhythmGuard-$VERSION-$ARCH.tar.gz"
+tar -C "$OUT/package" -czf "$OUT/VGT-RythmGuard-$VERSION-$ARCH.tar.gz" .
+echo "Release package created: $OUT/VGT-RythmGuard-$VERSION-$ARCH.tar.gz"

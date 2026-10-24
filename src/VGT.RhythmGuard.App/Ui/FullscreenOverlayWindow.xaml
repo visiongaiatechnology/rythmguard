@@ -2,7 +2,7 @@
         x:ClassModifier="internal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="VGT RhythmGuard"
+        Title="VGT RythmGuard"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
@@ -101,7 +101,7 @@
                 </StackPanel>
 
                 <TextBlock x:Name="HintText" Style="{StaticResource Text.Caption}" HorizontalAlignment="Center"
-                           Margin="0,22,0,0" Text="VGT RhythmGuard · Dein Rhythmus hat Vorrang vor dem Bildschirm." />
+                           Margin="0,22,0,0" Text="VGT RythmGuard · Protect Your Rhythm. Protect Yourself." />
             </StackPanel>
         </Border>
     </Grid>

@@ -75,8 +75,8 @@ public partial class App : System.Windows.Application
         {
             _logger!.Info("Zweite Instanz erkannt und beendet.");
             System.Windows.MessageBox.Show(
-                "VGT RhythmGuard läuft bereits. Das Dashboard öffnest du über das Tray-Symbol.",
-                "VGT RhythmGuard",
+                "VGT RythmGuard läuft bereits. Das Dashboard öffnest du über das Tray-Symbol.",
+                "VGT RythmGuard",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
             Shutdown();
@@ -159,10 +159,10 @@ public partial class App : System.Windows.Application
         try
         {
             System.Windows.MessageBox.Show(
-                "VGT RhythmGuard ist auf einen unerwarteten Fehler gestoßen und wird beendet.\n\n"
+                "VGT RythmGuard ist auf einen unerwarteten Fehler gestoßen und wird beendet.\n\n"
                 + exception.Message
                 + "\n\nDetails: " + AppPaths.LogFilePath,
-                "VGT RhythmGuard",
+                "VGT RythmGuard",
                 MessageBoxButton.OK,
                 MessageBoxImage.Error);
         }
