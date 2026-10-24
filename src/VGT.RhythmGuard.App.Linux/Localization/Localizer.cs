@@ -110,16 +110,35 @@ internal static class Localizer
         ["Bett-Modus endet in {0} Minuten"] = new() { ["en"] = "Bed mode ends in {0} minutes", ["es"] = "El modo cama termina en {0} minutos", ["it"] = "Modalità letto termina tra {0} minuti", ["ru"] = "Режим кровати завершится через {0} мин", ["zh"] = "睡眠模式将在 {0} 分钟后结束", ["ja"] = "ベッドモードは {0} 分後に終了します" },
         ["Danach: {0}"] = new() { ["en"] = "Then: {0}", ["es"] = "Después: {0}", ["it"] = "Poi: {0}", ["ru"] = "Затем: {0}", ["zh"] = "然后：{0}", ["ja"] = "その後：{0}" },
         ["FOKUS"] = new() { ["en"] = "FOCUS", ["es"] = "ENFOQUE", ["it"] = "FOCUS", ["ru"] = "ФОКУС", ["zh"] = "专注", ["ja"] = "フォーカス" },
-    };
+        ["DEINE PAUSE"] = new() { ["en"] = "YOUR BREAK" },
+        ["Du hast die Pause selbst gestartet. Bleib dabei."] = new() { ["en"] = "You started this break yourself. Stay with it." },
+        ["Augen schließen und zehnmal tief durchatmen."] = new() { ["en"] = "Close your eyes and take ten deep breaths." },
+        ["Aufstehen. Der PC kann warten."] = new() { ["en"] = "Stand up. The PC can wait." },
+        ["RhythmGuard gestartet"] = new() { ["en"] = "RhythmGuard started" },
+        ["Pause gestartet"] = new() { ["en"] = "Break started" },
+        ["Pause abgeschlossen"] = new() { ["en"] = "Break completed" },
+        ["Pause abgebrochen"] = new() { ["en"] = "Break cancelled" },
+        ["Abend-Erinnerung angezeigt"] = new() { ["en"] = "Evening reminder shown" },
+        ["Bett-Modus gestartet"] = new() { ["en"] = "Bed mode started" },
+        ["Bett-Modus beendet"] = new() { ["en"] = "Bed mode stopped" },
+        ["Energie-Aktion ausgeführt"] = new() { ["en"] = "Power action executed" },
+        ["Notausstieg genutzt"] = new() { ["en"] = "Emergency exit used" },
+        ["Einstellungen gespeichert"] = new() { ["en"] = "Settings saved" },
+        ["Rhythmus-Engine · aktiv"] = new() { ["en"] = "Rhythm engine · active" },
+        ["Abendmodus · automatisch"] = new() { ["en"] = "Evening mode · automatic" },
+        ["Autostart · in Einstellungen"] = new() { ["en"] = "Autostart · in settings" },    };
 
     /// <summary>Übersetzt die statischen Texte eines Avalonia-Fensters (deutsche Quelltexte im Code).</summary>
-    public static void TranslateTree(Visual root)
+    public static int LastTranslationCount;
+
+public static void TranslateTree(Visual root)
     {
         if (CurrentLanguage == German || root is null)
         {
             return;
         }
 
+        LastTranslationCount = 0;
         Walk(root);
     }
 
@@ -128,6 +147,7 @@ internal static class Localizer
         if (visual is TextBlock textBlock && !string.IsNullOrEmpty(textBlock.Text))
         {
             textBlock.Text = T(textBlock.Text);
+            LastTranslationCount++;
         }
         else if (visual is ContentControl contentControl && contentControl.Content is string content)
         {

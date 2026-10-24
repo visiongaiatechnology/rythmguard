@@ -3,7 +3,7 @@
 set -e
 export PATH="$HOME/.dotnet:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VERSION="1.3.0"
+VERSION="1.3.1"
 OUT="$ROOT/dist-linux"
 ARCH="linux-x64"
 

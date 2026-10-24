@@ -37,8 +37,8 @@ dotnet run --project src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csp
 ## Package
 
 ```bash
-bash scripts/publish-linux.sh      # dist-linux/VGT-RhythmGuard-1.3.0-linux-x64.tar.gz
-bash scripts/build-appimage.sh     # dist-linux/VGT-RhythmGuard-1.3.0-linux-x86_64.AppImage
+bash scripts/publish-linux.sh      # dist-linux/VGT-RhythmGuard-1.3.1-linux-x64.tar.gz
+bash scripts/build-appimage.sh     # dist-linux/VGT-RhythmGuard-1.3.1-linux-x86_64.AppImage
 ```
 
 CI: `.github/workflows/linux.yml` (build + fact suite + Xvfb UI selftest) and

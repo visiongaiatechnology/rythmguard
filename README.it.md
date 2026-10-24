@@ -20,7 +20,7 @@
 | Piattaforma | Versione | Download |
 |---|---|---|
 | 🪟 **Windows 10/11 x64** | **1.2.0 Beta** | [**Installatore Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.2.0-beta.1/VGT-RhythmGuard-Setup-1.2.0-Beta.exe) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1) |
-| 🐧 **Linux x64** | **1.3.0 Beta** | [**AppImage (consigliato)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x86_64.AppImage) · [Archivio tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x64.tar.gz) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.0-linux-beta.1) |
+| 🐧 **Linux x64** | **1.3.1 Beta** | [**AppImage (consigliato)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x86_64.AppImage) · [Archivio tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x64.tar.gz) · [Note di rilascio](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1) |
 
 > Windows: installazione per utente, senza diritti di amministratore. Linux: AppImage è il modo più semplice (chmod +x ed eseguire). Tutte le release: [https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases).
 ## Perché Rhythm Guard

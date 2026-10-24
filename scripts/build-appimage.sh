@@ -3,7 +3,7 @@
 set -e
 export PATH="$HOME/.dotnet:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VERSION="1.3.0"
+VERSION="1.3.1"
 OUT="$ROOT/dist-linux"
 APPDIR="$OUT/VGT-RhythmGuard.AppDir"
 
@@ -19,8 +19,9 @@ cp "$ROOT/src/VGT.RhythmGuard.App.Linux/Assets/logo-mark.png" "$APPDIR/vgt-rhyth
 cp "$ROOT/linux/AppRun" "$APPDIR/AppRun"
 chmod +x "$APPDIR/AppRun" "$APPDIR/usr/bin/rythmguard"
 
-TOOL="$ROOT/.cache/appimagetool-x86_64.AppImage"
+TOOL="/tmp/rg-appimagetool-x86_64.AppImage"
 if [ ! -x "$TOOL" ]; then
+  rm -f "$TOOL"
   curl -sSL "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage" -o "$TOOL"
   chmod +x "$TOOL"
 fi

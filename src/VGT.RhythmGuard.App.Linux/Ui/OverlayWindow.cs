@@ -76,7 +76,17 @@ internal sealed class OverlayWindow : Window
             BuildShutdownContent();
         }
 
-        Opened += (_, _) => WindowState = WindowState.FullScreen;
+        Opened += (_, _) =>
+        {
+            ApplyFullScreen();
+            var retry = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(500) };
+            retry.Tick += (_, _) =>
+            {
+                retry.Stop();
+                ApplyFullScreen();
+            };
+            retry.Start();
+        };
         KeyDown += OnKeyDown;
         KeyUp += OnKeyUp;
     }
@@ -228,6 +238,65 @@ internal sealed class OverlayWindow : Window
         HorizontalAlignment = HorizontalAlignment.Center,
     };
 
+    private void ApplyFullScreen()
+    {
+        var screen = Screens.Primary;
+        int width;
+        int height;
+
+        if (screen is not null)
+        {
+            Position = new PixelPoint(screen.Bounds.X, screen.Bounds.Y);
+            width = screen.Bounds.Width;
+            height = screen.Bounds.Height;
+        }
+        else
+        {
+            (width, height) = QueryX11Screen() ?? (1920, 1080);
+            Position = new PixelPoint(0, 0);
+        }
+        Width = width;
+        Height = height;
+        WindowState = WindowState.Normal;
+        Topmost = true;
+    }
+
+    private static (int Width, int Height)? QueryX11Screen()
+    {
+        try
+        {
+            using var process = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "xwininfo",
+                Arguments = "-root",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+            });
+            if (process is null)
+            {
+                return null;
+            }
+
+            var output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit(2000);
+            var widthMatch = System.Text.RegularExpressions.Regex.Match(output, @"Width:\s*(\d+)");
+            var heightMatch = System.Text.RegularExpressions.Regex.Match(output, @"Height:\s*(\d+)");
+            if (widthMatch.Success && heightMatch.Success
+                && int.TryParse(widthMatch.Groups[1].Value, out var w)
+                && int.TryParse(heightMatch.Groups[1].Value, out var h)
+                && w > 0 && h > 0)
+            {
+                return (w, h);
+            }
+        }
+        catch (Exception ex) when (ex is System.ComponentModel.Win32Exception or InvalidOperationException)
+        {
+            // Fallback dimensions.
+        }
+
+        return null;
+    }
     private void OnKeyDown(object? sender, KeyEventArgs e)
     {
         if (e.Key != Key.Escape || !_emergencyEnabled || _kind != OverlayKind.Break)

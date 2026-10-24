@@ -3,6 +3,14 @@
 All notable changes to VGT Rhythm Guard are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](https://semver.org/).
 
+## [1.3.1] — 2026-10-24
+
+### Fixed
+- Linux: break overlay now covers the full screen on X11 (explicit geometry + `xwininfo` fallback
+  when Avalonia reports no screen), verified with Xvfb/Openbox screenshots.
+- Linux: remaining English UI strings are localized (event feed, system status, overlay hints,
+  break suggestions).
+- Packaging: AppImage build tool is kept out of release assets; version bumped to 1.3.1.
 ## [1.3.0] — 2026-10-24
 
 ### Added

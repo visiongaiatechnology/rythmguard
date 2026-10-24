@@ -20,7 +20,7 @@
 | プラットフォーム | バージョン | ダウンロード |
 |---|---|---|
 | 🪟 **Windows 10/11 x64** | **1.2.0 Beta** | [**Windows インストーラー**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.2.0-beta.1/VGT-RhythmGuard-Setup-1.2.0-Beta.exe) · [リリースノート](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.2.0-beta.1) |
-| 🐧 **Linux x64** | **1.3.0 Beta** | [**AppImage（推奨）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x86_64.AppImage) · [tar アーカイブ](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.0-linux-beta.1/VGT-RhythmGuard-1.3.0-linux-x64.tar.gz) · [リリースノート](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.0-linux-beta.1) |
+| 🐧 **Linux x64** | **1.3.1 Beta** | [**AppImage（推奨）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x86_64.AppImage) · [tar アーカイブ](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.3.1-linux-beta.1/VGT-RhythmGuard-1.3.1-linux-x64.tar.gz) · [リリースノート](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.3.1-linux-beta.1) |
 
 > Windows：ユーザー単位のインストール（管理者権限不要）。Linux：AppImage が最も簡単（chmod +x して実行）。すべてのリリース：[https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases)。
 ## Rhythm Guard について
