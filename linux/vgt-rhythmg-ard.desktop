@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=VGT Rhythm Guard
+GenericName=Mental Health Rhythm System
+Comment=Forced breaks, evening wind-down and bed mode for a healthy rhythm
+Exec=rythmguard --dashboard
+TryExec=rythmguard
+Icon=vgt-rhythmg-ard
+Terminal=false
+Categories=Utility;
+Keywords=break;mental health;rhythm;focus;wellbeing;pause;sleep;
+StartupNotify=true
+StartupWMClass=VGT Rhythm Guard

@@ -1,0 +1,49 @@
+name: linux-release
+
+on:
+  push:
+    tags:
+      - 'v*-linux*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build Linux packages (tarball + AppImage)
+        run: |
+          bash scripts/publish-linux.sh
+          bash scripts/build-appimage.sh || echo "AppImage build failed - tarball is still attached"
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: true
+          name: "VGT Rhythm Guard ${{ github.ref_name }}"
+          body: |
+            Linux beta release of VGT Rhythm Guard (Avalonia UI, 1:1 feature parity with Windows).
+
+            **Features:** forced breaks, evening wind-down mode, bed mode with sleep/hibernate/shutdown,
+            Aurora Glass dashboard, 7 languages, XDG autostart, systemd power actions, single instance.
+
+            **Known limitations (beta):**
+            - Forced fullscreen blocking fully works on X11; Wayland blocking depends on the compositor
+              (wlr-layer-shell compositors such as Sway/Hyprland; GNOME/KDE have restrictions).
+            - Tray icon requires AppIndicator/StatusNotifier support (GNOME needs an extension);
+              the app works without tray via autostart/terminal.
+            - Packages are self-contained and unsigned; verify the SHA256 checksums in this release.
+            - UI localization covers the main surfaces; some secondary strings may fall back to German.
+
+            **Install:** download the `.tar.gz` or `.AppImage`, make it executable and run it.
+            The AppImage is the easiest option: `chmod +x *.AppImage && ./VGT-RhythmGuard-*-linux-x86_64.AppImage --dashboard`
+          files: |
+            dist-linux/*.tar.gz
+            dist-linux/*.AppImage
+          fail_on_unmatched_files: false

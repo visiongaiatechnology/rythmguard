@@ -1,0 +1,47 @@
+name: linux
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/VGT.RhythmGuard.App.Linux/**'
+      - 'src/VGT.RhythmGuard.Core/**'
+      - 'scripts/publish-linux.sh'
+      - '.github/workflows/linux.yml'
+  pull_request:
+    paths:
+      - 'src/VGT.RhythmGuard.App.Linux/**'
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: System dependencies for Avalonia (X11)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libx11-6 libice6 libsm6 libfontconfig1 libgl1 libglib2.0-0
+
+      - name: Restore & build
+        run: |
+          dotnet restore VGT.RhythmGuard.slnx
+          dotnet build src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj -c Release --no-restore
+
+      - name: Core facts
+        run: dotnet run --project tools/VGT.RhythmGuard.FactRunner/VGT.RhythmGuard.FactRunner.csproj -c Release
+
+      - name: UI selftest (Xvfb)
+        run: xvfb-run -a dotnet run --project src/VGT.RhythmGuard.App.Linux/VGT.RhythmGuard.App.Linux.csproj -c Release --no-build -- --selftest
+
+      - name: Publish Linux x64 package
+        run: bash scripts/publish-linux.sh
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: rhythm-guard-linux-x64
+          path: dist-linux/*.tar.gz

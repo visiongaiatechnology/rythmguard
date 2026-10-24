@@ -1,0 +1,4 @@
+#!/bin/sh
+# AppImage entry point for VGT Rhythm Guard for Linux
+HERE="$(dirname "$(readlink -f "$0")")"
+exec "$HERE/usr/bin/rythmguard" "$@"

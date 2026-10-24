@@ -14,7 +14,7 @@
     <img src="https://github.com/visiongaiatechnology/rythmguard/actions/workflows/build.yml/badge.svg?branch=main" alt="build" />
   </a>
   <img src="https://img.shields.io/badge/version-1.2.0-7C5CFF" alt="version 1.2.0" />
-  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-4CC9F0" alt="Windows 10/11 x64" />
+  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20%7C%20Linux%20x64-4CC9F0" alt="Windows 10/11 and Linux x64" />
   <img src="https://img.shields.io/badge/.NET-10-512BD4" alt=".NET 10" />
   <img src="https://img.shields.io/badge/license-AGPL--3.0-3DA639" alt="AGPL-3.0" />
 </p>
@@ -71,6 +71,26 @@ erode sleep and mental health. Rhythm Guard turns Windows into a fixed frame:
 
 More: [`docs/screenshots/`](docs/screenshots/) · Design language: [`docs/DESIGN.md`](docs/DESIGN.md)
 
+## Linux
+
+A **1:1 Linux port** is included in `src/VGT.RhythmGuard.App.Linux` (Avalonia UI, .NET 10, Linux x64).
+It ships the same scheduler, forced-break overlay, evening mode, bed mode with systemd power actions,
+XDG autostart, single-instance protection, Aurora Glass dashboard and 7-language UI.
+
+![Linux break overlay](docs/screenshots/linux/linux-break-overlay.png)
+
+| Linux build | Linux package |
+|---|---|
+| `dotnet build src/VGT.RhythmGuard.App.Linux/... -c Release` | `bash scripts/publish-linux.sh` (tarball) |
+| UI selftest: `... -- --selftest` | `bash scripts/build-appimage.sh` (AppImage) |
+
+CI: [`.github/workflows/linux.yml`](.github/workflows/linux.yml) ·
+Release: [`.github/workflows/linux-release.yml`](.github/workflows/linux-release.yml) ·
+Details & limitations: [`docs/LINUX.md`](docs/LINUX.md)
+
+**Beta limitations:** fullscreen blocking is reliable on X11; on Wayland it depends on the compositor
+(wlr-layer-shell). Tray requires StatusNotifier/AppIndicator support (GNOME needs an extension).
+Power actions use `systemctl` and may require polkit confirmation.
 ## Requirements
 
 - Windows 10 (1809+) or Windows 11, x64

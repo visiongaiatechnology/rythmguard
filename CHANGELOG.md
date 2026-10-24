@@ -3,6 +3,15 @@
 All notable changes to VGT Rhythm Guard are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](https://semver.org/).
 
+## [1.3.0] — 2026-10-24
+
+### Added
+- **Linux port (1:1 feature parity)** as `VGT.RhythmGuard.App.Linux` using Avalonia UI (.NET 10).
+- Native Linux integration: XDG data/autostart, systemd power actions (`systemctl suspend/hibernate/poweroff`),
+  file-lock single instance, StatusNotifier/AppIndicator tray with graceful fallback.
+- Linux packaging: self-contained tarball (`scripts/publish-linux.sh`) and AppImage
+  (`scripts/build-appimage.sh`), plus GitHub Actions workflows for build and tag-based releases.
+- Linux documentation (`docs/LINUX.md`) including Wayland/X11 limitations.
 ## [1.2.0] — 2026-10-24
 
 ### Added
