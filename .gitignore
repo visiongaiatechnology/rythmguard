@@ -1,0 +1,38 @@
+# Build-Artefakte
+bin/
+obj/
+dist/
+dist-*/
+publish/
+artifacts/
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+
+# Test-/Coverage-Artefakte
+TestResults/
+coverage*
+*.trx
+
+# Lokale Laufzeitdaten (gehÃ¶ren nach %LOCALAPPDATA%\VGT\RhythmGuard)
+config.json
+state.json
+events.jsonl
+app.log
+*.tmp
+*.corrupt-*
+
+# Betriebssystem
+Thumbs.db
+.DS_Store
+
+# Secrets/Schlüssel
+.env
+*.key
+*.pem
+*.pfx
+logs/
+

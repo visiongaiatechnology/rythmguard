@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/VGT.RhythmGuard.App/VGT.RhythmGuard.App.csproj" />
+    <Project Path="src/VGT.RhythmGuard.Core/VGT.RhythmGuard.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/VGT.RhythmGuard.Core.Tests/VGT.RhythmGuard.Core.Tests.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/VGT.RhythmGuard.FactRunner/VGT.RhythmGuard.FactRunner.csproj" />
+  </Folder>
+</Solution>

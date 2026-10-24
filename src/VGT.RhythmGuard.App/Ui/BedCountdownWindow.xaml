@@ -1,0 +1,42 @@
+<Window x:Class="VGT.RhythmGuard.App.Ui.BedCountdownWindow"
+        x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bett-Modus"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        ShowActivated="False"
+        IsHitTestVisible="True">
+
+    <Border Style="{StaticResource Surface.GlassCompact}" CornerRadius="24" Padding="18,14" MinWidth="330"
+            Background="#F0150F33">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Width="38" Height="38" VerticalAlignment="Center">
+                <Ellipse Fill="#2638D9A9" />
+                <TextBlock Text="☾" FontSize="19" Foreground="{StaticResource Brush.Mint}"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+            <StackPanel Grid.Column="1" Margin="14,0,14,0" VerticalAlignment="Center">
+                <TextBlock Text="BETT-MODUS" Style="{StaticResource Text.Caption}" />
+                <TextBlock x:Name="ActionText" Style="{StaticResource Text.Caption}" Foreground="{StaticResource Brush.TextSecondary}"
+                           Margin="0,2,0,0" Text="danach Ruhezustand" />
+            </StackPanel>
+
+            <TextBlock x:Name="CountdownText" Grid.Column="2" FontFamily="{StaticResource Font.Display}"
+                       FontSize="26" FontWeight="SemiBold" Foreground="{StaticResource Brush.Text}"
+                       VerticalAlignment="Center" Text="02:00:00" />
+        </Grid>
+    </Border>
+</Window>

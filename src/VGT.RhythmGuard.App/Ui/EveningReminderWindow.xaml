@@ -1,0 +1,48 @@
+<Window x:Class="VGT.RhythmGuard.App.Ui.EveningReminderWindow"
+        x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Abendmodus"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
+        Topmost="True"
+        WindowStartupLocation="Manual"
+        ShowActivated="False">
+
+    <Border Style="{StaticResource Surface.Glass}" Width="448" Padding="28,24" Background="#EF150F33">
+        <StackPanel>
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                    <Ellipse Width="7" Height="7" Fill="{StaticResource Brush.Gold}" VerticalAlignment="Center" />
+                    <TextBlock x:Name="TimeCaption" Style="{StaticResource Text.Caption}" Margin="8,0,0,0"
+                               VerticalAlignment="Center" Text="ABENDMODUS · 23:00" />
+                </StackPanel>
+                <Button DockPanel.Dock="Right" Content="×" Style="{StaticResource Button.Ghost}"
+                        FontSize="18" Padding="10,2" Click="OnDismissClick" />
+            </DockPanel>
+
+            <TextBlock Style="{StaticResource Text.Headline}" FontSize="26" Margin="0,16,0,0"
+                       Text="Zeit, loszulassen." />
+            <TextBlock Style="{StaticResource Text.Body}" Margin="0,8,0,0"
+                       Text="Du hast für heute genug gearbeitet. Ab jetzt darf der Tag ruhig enden." />
+
+            <Border Style="{StaticResource Surface.Inset}" Margin="0,18,0,0">
+                <StackPanel>
+                    <TextBlock x:Name="BedHintText" Style="{StaticResource Text.Caption}" TextWrapping="Wrap"
+                               Text="Bett-Modus: 2 Std anschauen, dann Ruhezustand." />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button x:Name="StartBedButton" Style="{StaticResource Button.Primary}" Click="OnStartBedClick"
+                        Content="Bett-Modus starten" />
+                <Button Style="{StaticResource Button.Secondary}" Margin="10,0,0,0" Click="OnDismissClick"
+                        Content="Später" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

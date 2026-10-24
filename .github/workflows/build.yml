@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore VGT.RhythmGuard.slnx
+
+      - name: Build
+        run: dotnet build VGT.RhythmGuard.slnx -c Release --no-restore
+
+      - name: Core facts (testhost-free)
+        run: dotnet run --project tools/VGT.RhythmGuard.FactRunner/VGT.RhythmGuard.FactRunner.csproj -c Release --no-build
+
+      - name: xUnit tests
+        run: dotnet test tests/VGT.RhythmGuard.Core.Tests/VGT.RhythmGuard.Core.Tests.csproj -c Release --no-build
+
+      - name: Publish (smoke build)
+        run: dotnet publish src/VGT.RhythmGuard.App/VGT.RhythmGuard.App.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o dist

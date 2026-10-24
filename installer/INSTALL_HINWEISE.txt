@@ -1,0 +1,26 @@
+VGT RHYTHM GUARD — INSTALLATION
+
+Wichtig vor der Installation:
+
+1. Läuft VGT Rhythm Guard bereits? Dann bitte zuerst über das Tray-Symbol
+   (Rechtsklick -> Beenden) schließen, ggf. über den Task-Manager beenden.
+
+2. Windows SmartScreen kann die (noch nicht signierte) Setup-Datei beim ersten
+   Start melden:
+   "Weitere Informationen" anklicken -> "Trotzdem ausführen".
+
+3. Die Installation erfolgt ausschließlich für deinen Windows-Benutzer
+   (%LOCALAPPDATA%\Programs\VGT Rhythm Guard). Es werden KEINE
+   Administratorrechte benötigt und keine Systemdateien verändert.
+
+4. Auf der nächsten Seite kannst du optional auswählen:
+   - Desktop-Verknüpfung
+   - Mit Windows starten (Autostart, empfohlen für den festen Rhythmus)
+
+   Beide Optionen sind bewusst standardmäßig ausgeschaltet. Autostart kann
+   später jederzeit in den Einstellungen der App aktiviert werden.
+
+5. Nach der Installation startet die App über die Verknüpfung im Startmenü.
+
+Deinstallation: Einstellungen -> Apps -> Installierte Apps -> VGT Rhythm Guard
+(oder Startmenü -> VGT Rhythm Guard -> Uninstall).

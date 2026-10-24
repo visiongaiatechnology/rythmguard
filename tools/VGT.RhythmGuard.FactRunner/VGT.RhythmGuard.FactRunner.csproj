@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>VGT.RhythmGuard.FactRunner</RootNamespace>
+    <!-- Testharness fängt absichtlich alle Ausnahmen, um Fehler zu berichten. -->
+    <NoWarn>$(NoWarn);CA1031;CA1303</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\tests\VGT.RhythmGuard.Core.Tests\VGT.RhythmGuard.Core.Tests.csproj" />
+  </ItemGroup>
+</Project>
