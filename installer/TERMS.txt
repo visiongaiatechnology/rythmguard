@@ -1,0 +1,47 @@
+VGT RHYTHM GUARD 1.2.0 (BETA)
+TERMS OF USE, BETA NOTICE AND COPYRIGHT
+
+Copyright (C) 2026 VisionGaiaTechnology. All rights reserved.
+Project website: https://visiongaiatechnology.de
+Source code: https://github.com/visiongaiatechnology/rythmguard
+
+1. BETA SOFTWARE NOTICE
+   This build is a public beta and provided for evaluation and personal use.
+   Features, data formats and behavior may change before a stable release.
+   Bugs and unexpected behavior are possible. Do not rely on this software for
+   critical, safety-relevant or production tasks.
+
+2. LICENSE
+   This software is licensed under the GNU Affero General Public License v3.0
+   (AGPL-3.0). The full license text is available at:
+   https://www.gnu.org/licenses/agpl-3.0.html
+   The source code is published at the repository above. Third-party notices
+   are included in THIRD_PARTY_NOTICES.md in the source repository.
+
+3. NO WARRANTY / LIMITATION OF LIABILITY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE.
+
+4. YOUR RESPONSIBILITY
+   Rhythm Guard is a self-control and wellness tool, NOT a medical device and
+   NOT an operating-system security boundary. It can enforce breaks and execute
+   power actions (sleep, hibernate, shutdown) after a configurable countdown.
+   Always save your work before a configured shutdown. You are responsible for
+   your settings and for the use of the emergency exit.
+
+5. PRIVACY AND DATA
+   No network access, no telemetry and no cloud account are used. Configuration,
+   state, event history and logs are stored locally in
+   %LOCALAPPDATA%\VGT\RhythmGuard. The installer installs per-user only and does
+   not change system-wide files. Autostart, if enabled, is registered in
+   HKCU\Software\Microsoft\Windows\CurrentVersion\Run.
+
+6. SMARTSCREEN
+   This executable is not code-signed. Windows SmartScreen may ask for
+   confirmation once. Only run binaries obtained from the official GitHub
+   releases page above.
+
+By installing or using this software you acknowledge and accept these terms.

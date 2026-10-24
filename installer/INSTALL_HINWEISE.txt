@@ -1,26 +1,31 @@
-VGT RHYTHM GUARD — INSTALLATION
+VGT RHYTHM GUARD 1.2.0 (BETA) — INSTALLATION NOTES
 
-Wichtig vor der Installation:
+Before you install:
 
-1. Läuft VGT Rhythm Guard bereits? Dann bitte zuerst über das Tray-Symbol
-   (Rechtsklick -> Beenden) schließen, ggf. über den Task-Manager beenden.
+1. If Rhythm Guard is already running, close it first via the tray icon
+   (right-click -> Quit) or the Task Manager.
 
-2. Windows SmartScreen kann die (noch nicht signierte) Setup-Datei beim ersten
-   Start melden:
-   "Weitere Informationen" anklicken -> "Trotzdem ausführen".
+2. Windows SmartScreen may warn about the unsigned setup. Click
+   "More info" -> "Run anyway". Only run installers downloaded from the
+   official GitHub releases page.
 
-3. Die Installation erfolgt ausschließlich für deinen Windows-Benutzer
-   (%LOCALAPPDATA%\Programs\VGT Rhythm Guard). Es werden KEINE
-   Administratorrechte benötigt und keine Systemdateien verändert.
+3. This is a BETA build. It is provided for evaluation and personal use.
+   Save your work before testing forced breaks or shutdown behavior.
 
-4. Auf der nächsten Seite kannst du optional auswählen:
-   - Desktop-Verknüpfung
-   - Mit Windows starten (Autostart, empfohlen für den festen Rhythmus)
+What the setup does:
 
-   Beide Optionen sind bewusst standardmäßig ausgeschaltet. Autostart kann
-   später jederzeit in den Einstellungen der App aktiviert werden.
+- Installs per-user to %LOCALAPPDATA%\Programs\VGT Rhythm Guard.
+- Requires NO administrator rights and changes no system-wide files.
+- Optionally creates a desktop shortcut and enables autostart at sign-in.
+- Creates a Start-menu entry and a standard Windows uninstall entry.
 
-5. Nach der Installation startet die App über die Verknüpfung im Startmenü.
+You must accept the Terms of Use (Beta Notice, AGPL-3.0, no warranty) on the
+next page to continue.
 
-Deinstallation: Einstellungen -> Apps -> Installierte Apps -> VGT Rhythm Guard
-(oder Startmenü -> VGT Rhythm Guard -> Uninstall).
+Hints:
+
+- The app runs in the system tray. Open the dashboard from the tray icon or
+  the Start-menu shortcut.
+- Autostart is intentionally optional and can be changed at any time in
+  Settings -> System.
+- Emergency exit: hold ESC for 5 seconds and type PAUSE (can be disabled).

@@ -1,27 +1,32 @@
-; VGT Rhythm Guard — Inno Setup 6 Script
-; Per-User-Installation ohne Administratorrechte, inkl. optionaler Autostart-Integration.
-
+; VGT Rhythm Guard — Inno Setup 6 (English, Beta, branded, per-user)
 #define MyAppName "VGT Rhythm Guard"
 #define MyAppVersion "1.2.0"
 #define MyAppPublisher "VisionGaiaTechnology"
 #define MyAppExeName "VGT.RhythmGuard.exe"
+#define MyAppUrl "https://visiongaiatechnology.de"
+#define MyRepoUrl "https://github.com/visiongaiatechnology/rythmguard"
 
 [Setup]
 AppId={{B7C4E2A1-3F5D-4A8B-9C2E-1D6F0A7B3C5D}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion} (Beta)
 AppPublisher={#MyAppPublisher}
+AppPublisherURL={#MyAppUrl}
+AppSupportURL={#MyRepoUrl}/issues
+AppUpdatesURL={#MyRepoUrl}/releases
+AppCopyright=Copyright (C) 2026 VisionGaiaTechnology
 VersionInfoVersion=1.2.0.0
-VersionInfoProductName={#MyAppName}
+VersionInfoProductName={#MyAppName} {#MyAppVersion} Beta
 VersionInfoCompany={#MyAppPublisher}
-VersionInfoDescription=Mental-Health-Rhythmus-System für Windows
+VersionInfoCopyright=Copyright (C) 2026 VisionGaiaTechnology
+VersionInfoDescription=Mental health rhythm system for Windows — Beta setup
 DefaultDirName={localappdata}\Programs\VGT Rhythm Guard
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest
 OutputDir=..\dist-installer
-OutputBaseFilename=VGT-RhythmGuard-Setup-{#MyAppVersion}
+OutputBaseFilename=VGT-RhythmGuard-Setup-{#MyAppVersion}-Beta
 SetupIconFile=..\src\VGT.RhythmGuard.App\assets\app.ico
 UninstallDisplayIcon={app}\{#MyAppExeName}
 WizardStyle=modern dark
@@ -30,33 +35,37 @@ WizardSmallImageFile=assets\wizard-small.png
 WizardImageStretch=yes
 WizardImageBackColor=$1A1240
 WizardSizePercent=115
+LicenseFile=..\installer\TERMS.txt
+InfoBeforeFile=..\installer\INSTALL_HINWEISE.txt
 Compression=lzma2/max
 SolidCompression=yes
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 CloseApplications=yes
 RestartApplications=no
-InfoBeforeFile=..\installer\INSTALL_HINWEISE.txt
 MinVersion=10.0.17763
 
 [Languages]
-Name: "german"; MessagesFile: "compiler:Languages\German.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Messages]
-WelcomeLabel1=Willkommen bei VGT Rhythm Guard
-WelcomeLabel2=Dieses Setup installiert dein Mental-Health-Rhythmus-System für Windows:%n%nPausen am Tag, Abendmodus und Bett-Modus – als fester Bestandteil deines Alltags.%n%nDie Installation erfolgt ausschließlich für deinen Benutzer, ohne Administratorrechte und ohne Systemveränderungen.
-FinishedHeadingLabel=Dein Rhythmus ist bereit.
-FinishedLabel=VGT Rhythm Guard wurde erfolgreich installiert.%n%nStarte die App über das Startmenü oder die Desktop-Verknüpfung. Den Autostart aktivierst du bewusst selbst – in den Einstellungen der App oder über die Setup-Option.
-SetupWindowTitle=VGT Rhythm Guard – Setup
+WelcomeLabel1=Welcome to the VGT Rhythm Guard Beta Setup
+WelcomeLabel2=This wizard installs VGT Rhythm Guard {#MyAppVersion} (Beta) for your Windows user account.%n%nRhythm Guard anchors forced breaks, an evening wind-down mode and a bed-time power action directly into your Windows session.%n%nThis is a BETA build. No administrator rights are required and no system-wide files are modified.
+LicenseLabel=Please read and accept the Terms of Use, Beta Notice and Copyright before continuing.
+LicenseLabel3=Terms of Use, Beta Notice and Copyright
+FinishedHeadingLabel=Your rhythm is ready — beta installed.
+FinishedLabel=VGT Rhythm Guard {#MyAppVersion} (Beta) has been installed.%n%nStart it from the Start menu, the optional desktop shortcut, or the final page of this setup. Autostart is optional and can be changed at any time in Settings -> System.%n%nThis is beta software. Save your work before testing forced breaks or power actions.
+SetupWindowTitle=VGT Rhythm Guard {#MyAppVersion} Beta — Setup
 
 [Tasks]
-Name: "desktopicon"; Description: "Desktop-Verknüpfung erstellen"; GroupDescription: "Zusätzliche Verknüpfungen:"; Flags: unchecked
-Name: "autostart"; Description: "Mit Windows starten (empfohlen für den festen Rhythmus)"; GroupDescription: "Systemintegration:"; Flags: unchecked
+Name: "desktopicon"; Description: "Create a desktop shortcut"; GroupDescription: "Additional shortcuts:"; Flags: unchecked
+Name: "autostart"; Description: "Start Rhythm Guard with Windows (recommended for a fixed rhythm)"; GroupDescription: "System integration:"; Flags: unchecked
 
 [Files]
 Source: "..\dist-final\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\docs\DESIGN.md"; DestDir: "{app}\docs"; Flags: ignoreversion
+Source: "..\installer\TERMS.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\VGT Rhythm Guard"; Filename: "{app}\{#MyAppExeName}"; Parameters: "--settings"; IconFilename: "{app}\{#MyAppExeName}"
@@ -67,4 +76,4 @@ Name: "{autodesktop}\VGT Rhythm Guard"; Filename: "{app}\{#MyAppExeName}"; Param
 Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: string; ValueName: "VGT.RhythmGuard"; ValueData: """{app}\{#MyAppExeName}"" --logon"; Flags: uninsdeletevalue; Tasks: autostart
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Parameters: "--settings"; Description: "VGT Rhythm Guard jetzt starten"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Parameters: "--settings"; Description: "Start VGT Rhythm Guard now"; Flags: nowait postinstall skipifsilent
