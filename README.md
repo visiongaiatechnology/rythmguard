@@ -34,16 +34,16 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1"><img src="https://img.shields.io/badge/Download_Windows-v1.4.0-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows v1.2.0" /></a>
-  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1"><img src="https://img.shields.io/badge/Download_Linux-v1.4.0-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux v1.3.1" /></a>
+  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-beta.1"><img src="https://img.shields.io/badge/Download_Windows-v1.4.1-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Download Windows v1.4.1" /></a>
+  <a href="https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-linux-beta.1"><img src="https://img.shields.io/badge/Download_Linux-v1.4.1-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Download Linux v1.4.1" /></a>
 </p>
 
 ## ⬇️ Download
 
 | Platform | Version | Download |
 |---|---|---|
-| 🪟 **Windows 10/11 x64** | **1.4.0 Beta** | [**Windows installer**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-beta.1/VGT-RythmGuard-Setup-1.2.0-Beta.exe) · [Release notes](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1) |
-| 🐧 **Linux x64** | **1.4.0 Beta** | [**AppImage (recommended)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x86_64.AppImage) · [Tarball](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x64.tar.gz) · [Release notes](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1) |
+| 🪟 **Windows 10/11 x64** | **1.4.1 Beta** | [**Windows installer**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-beta.1/VGT-RythmGuard-Setup-1.4.1-Beta.exe) · [Release notes](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-beta.1) |
+| 🐧 **Linux x64** | **1.4.1 Beta** | [**AppImage (recommended)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x86_64.AppImage) · [Tarball](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x64.tar.gz) · [Release notes](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-linux-beta.1) |
 
 > Windows: per-user installer — no administrator rights required. Linux: AppImage is the easiest way (chmod +x and run). More releases: [https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases).
 ## Why RythmGuard?

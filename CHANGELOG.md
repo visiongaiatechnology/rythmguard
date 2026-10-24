@@ -3,6 +3,18 @@
 All notable changes to VGT Rhythm Guard are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](https://semver.org/).
 
+## [1.4.1] — 2026-10-24
+
+### Fixed
+- **Evening mode never showed a reminder.** The rhythm engine exposed only the *next* evening
+  slot, which is always strictly in the future, while the coordinator waited for `now >= due`.
+  That slot never arrived, so the glass reminder window never appeared. The snapshot now also
+  exposes the *due* slot (`DueEveningReminder`); the reminder is shown immediately when the
+  evening mode starts (e.g. 21:00 with a custom day end) and afterwards every configured
+  interval (default: 20 minutes). Windows and Linux coordinators aligned.
+- Regression facts added: due slot is never in the future, old coordinator condition provably
+  never triggers, tick-loop simulation shows 23:00 / 23:20 / 23:40 reminders.
+
 ## [1.4.0] — 2026-10-24
 
 ### Changed
@@ -16,6 +28,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/), versioning: [SemVer](ht
 ### Technical
 - Technical identifiers (namespaces, assembly/repository names, tags) intentionally unchanged for
   upgrade compatibility; display brand is RythmGuard.
+
 ## [1.3.1] — 2026-10-24
 
 ### Fixed

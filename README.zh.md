@@ -21,8 +21,8 @@
 
 | 平台 | 版本 | 下载 |
 |---|---|---|
-| 🪟 **Windows 10/11 x64** | **1.4.0 Beta** | [**Windows 安装程序**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-beta.1/VGT-RythmGuard-Setup-1.2.0-Beta.exe) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1) |
-| 🐧 **Linux x64** | **1.4.0 Beta** | [**AppImage（推荐）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x86_64.AppImage) · [tar 压缩包](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x64.tar.gz) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1) |
+| 🪟 **Windows 10/11 x64** | **1.4.1 Beta** | [**Windows 安装程序**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-beta.1/VGT-RythmGuard-Setup-1.4.1-Beta.exe) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-beta.1) |
+| 🐧 **Linux x64** | **1.4.1 Beta** | [**AppImage（推荐）**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x86_64.AppImage) · [tar 压缩包](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x64.tar.gz) · [发布说明](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-linux-beta.1) |
 
 > Windows：按用户安装，无需管理员权限。Linux：AppImage 最简单（chmod +x 后运行）。所有版本：[https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases)。
 ## 为什么选择 RythmGuard

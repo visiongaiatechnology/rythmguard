@@ -21,8 +21,8 @@
 
 | Платформа | Версия | Загрузка |
 |---|---|---|
-| 🪟 **Windows 10/11 x64** | **1.4.0 Beta** | [**Установщик Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-beta.1/VGT-RythmGuard-Setup-1.2.0-Beta.exe) · [Примечания к выпуску](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-beta.1) |
-| 🐧 **Linux x64** | **1.4.0 Beta** | [**AppImage (рекомендуется)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x86_64.AppImage) · [Архив tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.0-linux-beta.1/VGT-RythmGuard-1.4.0-linux-x64.tar.gz) · [Примечания к выпуску](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.0-linux-beta.1) |
+| 🪟 **Windows 10/11 x64** | **1.4.1 Beta** | [**Установщик Windows**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-beta.1/VGT-RythmGuard-Setup-1.4.1-Beta.exe) · [Примечания к выпуску](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-beta.1) |
+| 🐧 **Linux x64** | **1.4.1 Beta** | [**AppImage (рекомендуется)**](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x86_64.AppImage) · [Архив tar](https://github.com/visiongaiatechnology/rythmguard/releases/download/v1.4.1-linux-beta.1/VGT-RythmGuard-1.4.1-linux-x64.tar.gz) · [Примечания к выпуску](https://github.com/visiongaiatechnology/rythmguard/releases/tag/v1.4.1-linux-beta.1) |
 
 > Windows: установка для текущего пользователя, без прав администратора. Linux: AppImage — самый простой способ (chmod +x и запуск). Все выпуски: [https://github.com/visiongaiatechnology/rythmguard/releases](https://github.com/visiongaiatechnology/rythmguard/releases).
 ## Зачем RythmGuard

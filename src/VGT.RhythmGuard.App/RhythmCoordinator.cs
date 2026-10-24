@@ -280,8 +280,9 @@ internal sealed class RhythmCoordinator : IDisposable
 
         if (snapshot.Mode == RhythmMode.Evening)
         {
-            if (snapshot.NextEveningReminder is { } due
-                && now >= due
+            // Fälliger Rasterpunkt (inkl. Abendbeginn), nicht der "nächste" geplante:
+            // NextEveningReminder liegt immer strikt in der Zukunft und würde nie auslösen.
+            if (snapshot.DueEveningReminder is { } due
                 && _lastEveningReminderSlot != due)
             {
                 _lastEveningReminderSlot = due;

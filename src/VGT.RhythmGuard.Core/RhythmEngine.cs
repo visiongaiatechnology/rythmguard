@@ -93,9 +93,11 @@ public static class RhythmEngine
         }
 
         DateTime? nextReminder = null;
+        DateTime? dueReminder = null;
         if (settings.EveningRemindersEnabled)
         {
             nextReminder = FindNextEveningReminder(localNow, eveningStart, nextDayStart, settings.EveningReminderMinutes);
+            dueReminder = FindDueEveningReminder(localNow, eveningStart, settings.EveningReminderMinutes);
         }
 
         var windowStart = nextDayStart.Date + settings.DayStart.ToTimeSpan();
@@ -110,6 +112,7 @@ public static class RhythmEngine
             PhaseProgress = Progress(eveningStart, nextDayStart, localNow),
             NextBreakStart = null,
             NextEveningReminder = nextReminder,
+            DueEveningReminder = dueReminder,
             CycleNumber = null,
             BedSession = null,
             PendingPowerAction = null,
@@ -130,6 +133,26 @@ public static class RhythmEngine
         var steps = (long)(elapsed.Ticks / interval.Ticks) + 1; // strikt nach localNow
         var candidate = eveningStart + TimeSpan.FromTicks(steps * interval.Ticks);
         return candidate < nextDayStart ? candidate : null;
+    }
+
+    /// <summary>
+    /// Jüngster bereits erreichter Rasterpunkt (&lt;= localNow). Der Abendbeginn selbst ist der
+    /// erste Punkt, damit der Wechsel in den Abendmodus sofort sichtbar wird. Ohne diese
+    /// "fällige" Sicht könnte die UI nie auslösen: <see cref="FindNextEveningReminder"/> liefert
+    /// immer einen Zeitpunkt strikt nach localNow.
+    /// </summary>
+    /// <exception cref="InvalidOperationException"><paramref name="localNow"/> liegt vor dem Abendbeginn.</exception>
+    private static DateTime FindDueEveningReminder(DateTime localNow, DateTime eveningStart, int intervalMinutes)
+    {
+        if (localNow < eveningStart)
+        {
+            throw new InvalidOperationException("Abend-Erinnerungen können erst ab dem Abendbeginn fällig sein.");
+        }
+
+        var interval = TimeSpan.FromMinutes(intervalMinutes);
+        var elapsed = localNow - eveningStart;
+        var steps = (long)(elapsed.Ticks / interval.Ticks);
+        return eveningStart + TimeSpan.FromTicks(steps * interval.Ticks);
     }
 
     private static RhythmSnapshot EvaluateDay(DateTime localNow, RhythmSettings settings, DateTime dayStart, DateTime dayEnd)

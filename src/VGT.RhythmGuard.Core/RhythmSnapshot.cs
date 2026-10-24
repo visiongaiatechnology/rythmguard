@@ -20,8 +20,16 @@ public sealed record RhythmSnapshot
     /// <summary>Nächster geplanter Pausenbeginn, falls vorhanden.</summary>
     public DateTime? NextBreakStart { get; init; }
 
-    /// <summary>Nächstes fälliges Abend-Erinnerungsintervall, falls vorhanden.</summary>
+    /// <summary>Nächstes geplantes Abend-Erinnerungsintervall, falls vorhanden (strikt in der Zukunft).</summary>
     public DateTime? NextEveningReminder { get; init; }
+
+    /// <summary>
+    /// Jüngster bereits erreichter Abend-Rasterpunkt (&lt;= jetzt), der noch angezeigt werden muss.
+    /// Im Abendmodus ist das ab dem Wechsel der Abendbeginn selbst, danach das jeweils letzte
+    /// 20-Minuten-Intervall. Die UI zeigt eine Erinnerung genau dann an, wenn sich dieser Slot
+    /// vom zuletzt gezeigten unterscheidet.
+    /// </summary>
+    public DateTime? DueEveningReminder { get; init; }
 
     /// <summary>Nummer des Tageszyklus (1-basiert), falls im Tagesfenster.</summary>
     public int? CycleNumber { get; init; }

@@ -1,6 +1,6 @@
 ; VGT RythmGuard — Inno Setup 6 (English, Beta, branded, per-user)
 #define MyAppName "VGT RythmGuard"
-#define MyAppVersion "1.4.0"
+#define MyAppVersion "1.4.1"
 #define MyAppPublisher "VisionGaiaTechnology"
 #define MyAppExeName "VGT.RhythmGuard.exe"
 #define MyAppUrl "https://visiongaiatechnology.de"
@@ -16,7 +16,7 @@ AppPublisherURL={#MyAppUrl}
 AppSupportURL={#MyRepoUrl}/issues
 AppUpdatesURL={#MyRepoUrl}/releases
 AppCopyright=Copyright (C) 2026 VisionGaiaTechnology
-VersionInfoVersion=1.4.0.0
+VersionInfoVersion=1.4.1.0
 VersionInfoProductName={#MyAppName} {#MyAppVersion} Beta
 VersionInfoCompany={#MyAppPublisher}
 VersionInfoCopyright=Copyright (C) 2026 VisionGaiaTechnology
